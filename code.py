@@ -68,13 +68,4 @@ TIME = time[I.index(max(I))] #time(days) to reach max value of I
 print("Time to reach maximum value:", TIME, "Days (", TIME*24, "hours )")
 print()
 
-#interpolate by observing both array I and n values to find 1% infection Time(in hours) to reach 1% infection.
-x = (((time[76] - time[77])/(I[76]-I[77]))*(0.01*max(I) - I[76])) + time[76] 
-print("Time to reach 1% infection:","%.2f" % x , "Days (", "%.2f" % (x*24), "hours )")
-
-
-x = x-TIME
-print("Time taken after peak to reach 1% infection:","%.2f" % x , "Days (", "%.2f" % (x*24), "hours )")
-
-
 plot(s,I,r,time) #plot the results
